@@ -1,12 +1,13 @@
-import React from 'react';
-import style from "./square.module.css";
+import React from "react";
+import styles from "./square.module.css";
 
-const Square = ({squareClicked, id, squareList}) => {
-    return (
-        <div className={style["square-box"]} onClick={() => squareClicked(id)}>
-            {squareList[id]}
-        </div>
-    )
-}
+const Square = ({ squareClicked, id, squareList }) => {
+  return (
+    <div className={styles["square-box"]} onClick={() => squareClicked(id)}>
+      
+      <h2>{squareList[id]}</h2>
+    </div>
+  );
+};
 
-export default Square
+export default Square;

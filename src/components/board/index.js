@@ -3,13 +3,13 @@ import Square from "../square";
 import style from "./board.module.css";
 
 const Board = ({ squareClicked, squareList }) => {
-    // param id is passed below
   const renderSquare = (id) => {
-    return <Square squareClicked={squareClicked} id={id} squareList={squareList}/>;
+    return (
+      <Square squareClicked={squareClicked} id={id} squareList={squareList} />
+    );
   };
-
   return (
-    <div className="board">
+    <div>
       <div style={{ display: "flex" }}>
         {renderSquare(0)}
         {renderSquare(1)}
@@ -30,3 +30,4 @@ const Board = ({ squareClicked, squareList }) => {
 };
 
 export default Board;
+
